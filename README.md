@@ -3,7 +3,7 @@
 This repository is to demonstrate 3 Wi-Fi attacks against the popular ESP32/8266 IoT devices:
 
 * **[Zero PMK Installation (CVE-2019-12587)](https://matheus-garbelini.github.io/home/post/zero-pmk-installation/)** - Hijacking ESP32/ESP8266 clients connected to enterprise networks;
-* **[ESP32/ESP8266 EAP client crash (CVE-2019-12586)](ESP32/ESP8266 EAP client crash (CVE-2019-12586))** - Crashing ESP devices connected to enterprise networks;
+* **[ESP32/ESP8266 EAP client crash (CVE-2019-12586)](https://matheus-garbelini.github.io/home/post/esp32-esp8266-eap-crash/)** - Crashing ESP devices connected to enterprise networks;
 * **[ESP8266 Beacon Frame Crash (CVE-2019-12588)](https://matheus-garbelini.github.io/home/post/esp8266-beacon-frame-crash/)** - Crashing ESP8266 Wi-Fi devices.
 
 Follow the links on each vulnerability for more details.
