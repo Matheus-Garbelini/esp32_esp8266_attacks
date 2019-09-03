@@ -1,6 +1,6 @@
 ## ESP32/ESP8266 Wi-Fi Attacks
 
-This repository is to demonstrate 3 Wi-Fi attacks against the popular ESP32/8266 IoT devices:
+This repository demonstrates 3 Wi-Fi attacks against the popular ESP32/8266 IoT devices:
 
 * **[Zero PMK Installation (CVE-2019-12587)](https://matheus-garbelini.github.io/home/post/zero-pmk-installation/)** - Hijacking ESP32/ESP8266 clients connected to enterprise networks;
 * **[ESP32/ESP8266 EAP client crash (CVE-2019-12586)](https://matheus-garbelini.github.io/home/post/esp32-esp8266-eap-crash/)** - Crashing ESP devices connected to enterprise networks;
@@ -60,7 +60,7 @@ In this case, as the device is restarting every time it attempts a connection wi
 
 ### Configuring
 
-No need to configure. By default the PoC access point have the following default configuration:
+By default the PoC access point have the following default configuration:
 
 * ssid=TEST_KRA
 * channel=9
