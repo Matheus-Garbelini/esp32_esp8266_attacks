@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "kernel.h": "c",
+        "module.h": "c",
+        "rt2x00.h": "c",
+        "skbuff.h": "c",
+        "dma-mapping.h": "c",
+        "scatterlist.h": "c",
+        "mm.h": "c",
+        "memremap.h": "c",
+        "pgtable.h": "c",
+        "types.h": "c",
+        "int-ll64.h": "c",
+        "input-polldev.h": "c"
+    },
+    "editor.formatOnSave": true,
+    "shortcuts.buttons": [
+        "file-binary , workbench.action.tasks.build , Compile",
+        "terminal , workbench.action.terminal.toggleTerminal , Toggle terminal panel"
+    ]
+}

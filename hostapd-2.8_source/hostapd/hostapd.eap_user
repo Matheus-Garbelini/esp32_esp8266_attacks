@@ -1,0 +1,9 @@
+# hostapd user database for integrated EAP server
+
+# Phase 1 users
+"matheus_garbelini"		PEAP,TTLS	"testtest"
+# Wildcard for all other identities
+#*		PEAP,TTLS,TLS,SIM,AKA
+# Phase 2 (tunnelled within EAP-PEAP or EAP-TTLS) users
+"matheus_garbelini"		MSCHAPV2,TTLS-MSCHAPV2	"testtest"	[2]
+
