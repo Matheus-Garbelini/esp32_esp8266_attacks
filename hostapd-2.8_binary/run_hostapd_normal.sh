@@ -1,1 +1,1 @@
-sudo ./hostapd hostapd.conf -m 1
+sudo ./hostapd hostapd.conf -m 0

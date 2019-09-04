@@ -1,5 +1,7 @@
 ## ESP32/ESP8266 Wi-Fi Attacks
 
+![attack_logo](docs/attack_logo.png)
+
 This repository demonstrates 3 Wi-Fi attacks against the popular ESP32/8266 IoT devices:
 
 * **[Zero PMK Installation (CVE-2019-12587)](https://matheus-garbelini.github.io/home/post/zero-pmk-installation/)** - Hijacking ESP32/ESP8266 clients connected to enterprise networks;
@@ -16,7 +18,7 @@ While a custom version of hostapd is provided to test the first 2 vulnerabilitie
 
 ##### Running pre compiled binary
 
-​	If you are running debian or ubuntu you can execute the already compiled hostapd in the folder `hostapd-2.8_binary`. Just run `hostapd-2.8_binary/run_hostapd_exploit.sh` to start the access point to test the vulnerability or `hostapd-2.8_binary/run_hostapd_normal.sh` to start without this test. Be advised that you need to stop network services with `service network-manager stop` for your Wi-Fi interface to be free.
+​	If you are running debian or ubuntu you can execute the already compiled hostapd in the folder `hostapd-2.8_binary`. Just run `hostapd-2.8_binary/run_hostapd_exploit.sh` to start the access point to test the vulnerability or `hostapd-2.8_binary/run_zero_pmk_EAP.sh` to start without this test. Be advised that you need to stop network services with `service network-manager stop` for your Wi-Fi interface to be free.
 
 ###### TLDR:
 
@@ -30,7 +32,7 @@ service network-manager stop
 
 ​	If for some reason the binary doesn't work with your system, you can compile the project `hostapd-2.8_source` by running the script `./buid.sh`. The script installs the following dependencies before running the tool: `build-essential pkg-config git libnl-genl-3-dev libssl-dev libnl-route-3-dev`.
 
-​	After the build is successful, you can run the script `./run_hostapd_exploit.sh` to start the access point to test the vulnerability or `./run_hostapd_normal.sh` to start without the test.
+​	After the build is successful, you can run the script `./run_zero_pmk_EAP.sh` to start the access point to test the vulnerability or `./run_hostapd_normal.sh` to start without the test.
 
 ###### TLDR:
 
@@ -65,9 +67,9 @@ By default the PoC access point have the following default configuration:
 * ssid=TEST_KRA
 * channel=9
 * bssid=28:c6:3f:a8:af:c5
-* interface=wlan1mon
+* interface=wlan0
 * server_cert=wpa2_server.pem
-  private_key=wpa2_server.key
+* private_key=wpa2_server.key
 * user=matheus_garbelini
 * user_password=testtest
 * EAP method=PEAP
@@ -88,4 +90,6 @@ CipherString = DEFAULT@SECLEVEL=1
 
 ### Test client codes (optional)
 
-The codes used for testing the vulnerable devices is in folder esp_client_test_codes. You need ESP-IDF and and ESP8266_NONOS_SDK in order to compile both codes. Note that you should be using SDKs earlier than the ones mentioned 
+The codes used for testing the vulnerable devices is in folder `esp_client_test_codes`. 
+
+`ESP32_Arduino_EAP_Client` and `ESP8266_Arduino_EAP_Client` can be compiled by using their respective Arduino board support packages ([arduino-esp32](https://github.com/espressif/arduino-esp32) and [arduino-esp8266](https://github.com/esp8266/Arduino)). As for non-arduino codes, ESP-IDF and ESP8266_NONOS_SDK are required to compile `ESP8266_EAP_Client` and `ESP32_EAP_Client`. Note that you need to use the same or earlier SDKs as mentioned here to trigger all the described vulnerabilities. 
