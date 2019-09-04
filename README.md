@@ -1,5 +1,5 @@
 ## ESP32/ESP8266 Wi-Fi Attacks
-
+**This repository is part of a research outcome from the [ASSET Research Group](https://asset-group.github.io/).**
 ![attack_logo](docs/attack_logo.png)
 
 This repository demonstrates 3 Wi-Fi attacks against the popular ESP32/8266 IoT devices:
