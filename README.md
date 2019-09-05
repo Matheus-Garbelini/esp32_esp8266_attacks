@@ -101,3 +101,6 @@ CipherString = DEFAULT@SECLEVEL=1
 The codes used for testing the vulnerable devices is in folder `esp_client_test_codes`. 
 
 `ESP32_Arduino_EAP_Client` and `ESP8266_Arduino_EAP_Client` can be compiled by using their respective Arduino board support packages ([arduino-esp32](https://github.com/espressif/arduino-esp32) and [arduino-esp8266](https://github.com/esp8266/Arduino)). As for non-arduino codes, ESP-IDF and ESP8266_NONOS_SDK are required to compile `ESP8266_EAP_Client` and `ESP32_EAP_Client`. Note that you need to use the same or earlier SDKs as mentioned here to trigger all the described vulnerabilities. 
+
+### Acknowledgments
+**This research was partially supported by [Keysight Technologies](https://www.keysight.com/sg/en/home.html).**
